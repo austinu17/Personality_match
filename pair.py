@@ -129,20 +129,19 @@ df.loc[(df.CKIx == 'Slightly Disagree'), 'CKIx'] = -1
 
 # Scores to Letters
 df["IE"] = df['c']+df['g']+df['k']
-#df['IE'] = df['IE'].apply(lambda x: 'I' if x >=0 else 'E')
+df['IE'] = df['IE'].apply(lambda x: 'I' if x >=0 else 'E')
 
 df["NS"] = df['b']+df['f']+df['j']
-#df['NS'] = df['NS'].apply(lambda x: 'N' if x >=0 else 'S')
+df['NS'] = df['NS'].apply(lambda x: 'N' if x >=0 else 'S')
 
 df["FT"] = df['d']+df['h']+df['l']
-#df['FT'] = df['FT'].apply(lambda x: 'T' if x >=0 else 'F')
+df['FT'] = df['FT'].apply(lambda x: 'T' if x >=0 else 'F')
 
 df["JP"] = df['a']+df['e']+df['i']
-#df['JP'] = df['JP'].apply(lambda x: 'J' if x >0 else 'P')
+df['JP'] = df['JP'].apply(lambda x: 'J' if x >0 else 'P')
 
 #x == they are going to CKIx
 df['x'] = df['CKIx'].apply(lambda x: 'x' if x >0 else ' ')
-print(df)
 df['Type'] = df[df.columns[15:20]].apply(
     lambda x: ''.join(x.dropna().astype(str)),
     axis=1
