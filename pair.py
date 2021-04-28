@@ -241,7 +241,7 @@ final = final.rename(columns={
 'How often would you like to communicate with your buddy? ': 'How often would you like to communicate with your buddy?_1',
 'Type':'Type'})
 
-final_2 = final.rename(columns={
+final_2 = final_2.rename(columns={
 'First Name':'First Name_2',
 'Last Name':'Last Name_2', 
 'CKI District': 'CKI District_2',
